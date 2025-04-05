@@ -12,6 +12,13 @@ include vendor/xiaomi/peridot-miuicamera/BoardConfigVendor.mk
 # MiuiCamera
 CAMERA_PACKAGE_NAME := com.android.camera
 
+BUILD_BROKEN_DUP_RULES := true
+
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT = true
+TARGET_INCLUDES_MIUI_CAMERA := true
+TARGET_USES_MIUI_CAMERA := true
+
 # Properties
 TARGET_SYSTEM_PROP += $(MIUICAMERA_PATH)/system.prop
 
